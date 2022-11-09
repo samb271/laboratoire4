@@ -4,15 +4,19 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 public class LinesOfAction {
+
     TreeMap<String,Character> caseList = new TreeMap<String,Character>();
     int[][] board;
     String player;
     String opponent;
+
     public void setBoard(int[][] b, String player){
+
         this.board = b;
         this.player = player;
         int y=b.length+1;
         String[] x=this.buildXAxis(b[0].length);
+
         for (int index = 0; index < b.length; index++) {
             y--;
             for (int j = 0; j < b[index].length; j++) {
@@ -27,7 +31,6 @@ public class LinesOfAction {
             }
         }
     }
-
 
     public void printBoard(){
         caseList.forEach((k,v)->{
